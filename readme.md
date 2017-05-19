@@ -29,7 +29,6 @@ This module depends on
 * matplotlib
 * requests
 * hypothesis
-* seaborn
 * [Open Exoplanet Catalogue](https://github.com/OpenExoplanetCatalogue/open_exoplanet_catalogue) (somewhere on your system)
 
 **Currently only tested under Python 2.7, 3.4, 3.5 on mac and linux**. If you use windows or a different python version try it anyway and open an issue if you encounter problems.

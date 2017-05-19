@@ -8,13 +8,12 @@ from collections import OrderedDict
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib import rcParams
-import seaborn
 import time
 
 from . import astroquantities as aq
 from . import astroclasses as ac
 
-seaborn.set_style('whitegrid')
+
 rcParams.update({'figure.autolayout': True})
 
 
@@ -648,7 +647,17 @@ class DiscoveryMethodByYear(object):
         ax = fig.add_subplot(1, 1, 1)
 
         ind = np.arange(len(year_list))
-        colors = seaborn.color_palette("Set1", n_colors=8)
+
+        # output from seaborn.color_palette("Set1", n_colors=8)
+        colors = [(0.89411765336990356, 0.10196078568696976, 0.10980392247438431),
+                  (0.21602460800432691, 0.49487120380588606, 0.71987698697576341),
+                  (0.30426760128900115, 0.68329106055054012, 0.29293349969620797),
+                  (0.60083047361934883, 0.30814303335021526, 0.63169552298153153),
+                  (1.0, 0.50591311045721465, 0.0031372549487095253),
+                  (0.99315647868549117, 0.9870049982678657, 0.19915417450315812),
+                  (0.65845446095747107, 0.34122261685483596, 0.1707958535236471),
+                  (0.95850826852461868, 0.50846600392285513, 0.74492888871361229)]
+
         width = 0.9
         bottom = np.zeros_like(year_list)
         for i, method in enumerate(self.methods_to_plot):

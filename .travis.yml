@@ -6,11 +6,11 @@ sudo: false
 matrix:
   include:
     - python: "2.7"
-      env: DEPS="numpy nose matplotlib seaborn requests pandas"
+      env: DEPS="numpy nose matplotlib requests pandas"
     - python: "3.4"
-      env: DEPS="numpy nose matplotlib seaborn requests pandas"
+      env: DEPS="numpy nose matplotlib requests pandas"
     - python: "3.5"
-      env: DEPS="numpy nose matplotlib seaborn requests pandas"
+      env: DEPS="numpy nose matplotlib requests pandas"
 
 install:
   # See:
